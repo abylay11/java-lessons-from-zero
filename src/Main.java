@@ -1,25 +1,44 @@
-// Old code
-/*
 public class Main {
     public static void main(String[] args) {
-        // write your code here
-    }
-}
-*/
+        System.out.println("Переменные и типы данных");
 
-// Created Main class
-public class Main {
-    // Created class main function
-    public static void main(String[] args) {
-        // Default print
-        System.out.print("Hello form Java. It is my first 'Hello' in Java");
+        // 1) Тип данных
+        // 2) Назвать переменную
+        // 3) Присвоить значение
 
-        // Print to new line
-        System.out.println("----------");
-        System.out.println("Hello world!");
-        System.out.println("New line auto!");
+        int age; // Переменная без значения
+        age = 23;
+        System.out.println(age);
+        age = 15;
+        System.out.println(age);
 
-        // Перевод на новою строку, табулирование, экранирование
-        System.out.println("\tHello\n\t\"World!\"");
+        int age2 = 12;
+        System.out.println(age2);
+
+        System.out.println("Возраст: " + age2 + ".");
+
+        // ---
+
+        byte byteType = 123; // -128 <-> 127; int = 4 byte
+        System.out.println(byteType);
+
+        // byte - from -128 to 127 1 byte
+        // short - from -32768 to 32767 2 bytes
+        // int - 4 bytes
+        // long
+
+        float num = 4.123f;
+        double num2 = 13.21312313;
+
+        char ch = '5';
+
+        String user_name = "Bob";
+        System.out.println(user_name);
+
+        boolean isHappy = true;
+        System.out.println(isHappy);
+        isHappy = false;
+
+        System.out.println(isHappy);
     }
 }
