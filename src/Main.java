@@ -1,44 +1,20 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Переменные и типы данных");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Введите 1 число: ");
+        float num1 = scan.nextFloat();
 
-        // 1) Тип данных
-        // 2) Назвать переменную
-        // 3) Присвоить значение
+        System.out.print("Введите 2 число: ");
+        float num2 = scan.nextFloat();
 
-        int age; // Переменная без значения
-        age = 23;
-        System.out.println(age);
-        age = 15;
-        System.out.println(age);
+        float res1 = num1 + num2;
+        float res2 = num1 - num2;
+        float res3 = num1 * num2;
+        float res4 = num1 / num2;
 
-        int age2 = 12;
-        System.out.println(age2);
+        System.out.println("Результат: ");
+        System.out.println(res1 + "\n" + res2 + "\n" + res3 + "\n" + res4);
 
-        System.out.println("Возраст: " + age2 + ".");
-
-        // ---
-
-        byte byteType = 123; // -128 <-> 127; int = 4 byte
-        System.out.println(byteType);
-
-        // byte - from -128 to 127 1 byte
-        // short - from -32768 to 32767 2 bytes
-        // int - 4 bytes
-        // long
-
-        float num = 4.123f;
-        double num2 = 13.21312313;
-
-        char ch = '5';
-
-        String user_name = "Bob";
-        System.out.println(user_name);
-
-        boolean isHappy = true;
-        System.out.println(isHappy);
-        isHappy = false;
-
-        System.out.println(isHappy);
     }
 }
