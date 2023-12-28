@@ -1,44 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        // Методы в Java
-//        info("Hello");
-//        info("World");
-//        String java = "Java";
-//        info(java);
+        // ООП: классы и обьекты
+        Transport bmw = new Transport();
+        bmw.setValues(250.5f, 2500, "White", new byte[] {0,0,0});
+        String res1 = bmw.getValues();
+        System.out.println(res1);
+//        bmw.speed = 250.5f;
+//        bmw.weight = 2500;
+//        bmw.color = "White";
+//        bmw.coordinate = new byte[] {0, 0, 0};
 
-        int res = summa((short) 5, (short) 7);
-        info(String.valueOf(res));
+        Transport truck = new Transport();
+        truck.speed = 140.5f;
+        truck.weight = 5600;
+        truck.color = "Red";
+        truck.coordinate = new byte[] {100, 0, 100};
 
-        byte[] nums1 = new byte[] {5, 6, 8};
-
-        int sum1 = summaArray(nums1);
-        System.out.println("Сумма 1: " + sum1);
-
-        byte[] nums2 = new byte[] {5, 6, 8, 10, 22, 3};
-
-        int sum2 = summaArray(nums2);
-        System.out.println("Сумма 2: " + sum2);
-    }
-
-    public static int summaArray(byte[] arr) {
-        int summa = 0;
-
-        for (byte i =0; i < arr.length; i++)
-            summa += arr[i];
-
-
-        return summa;
-    }
-
-    public static int summa(short a, short b) {
-        int res = a + b;
-        String result = "Результат: " + res;
-        info(result);
-        return res;
-    }
-
-    public static void info(String word) {
-        System.out.print(word);
-        System.out.println("!");
+//        System.out.println("Truck speed: " + truck.speed + ". BMW speed: " + bmw.speed);
+        String res2 = truck.getValues();
+        System.out.println(res2);
     }
 }
