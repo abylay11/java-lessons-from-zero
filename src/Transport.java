@@ -10,21 +10,19 @@ public class Transport {
         this.setValues(_speed, _weight, _color, _coordinate);
         System.out.println(this.getValues());
     }
-
     public Transport(int weight, byte[] coordinate) {
         this.weight = weight;
         this.coordinate = coordinate;
         System.out.println(this.getValues());
     }
 
-    public void setValues(float speed, int weight, String color, byte[] coordinate) {
+    protected void setValues(float speed, int weight, String color, byte[] coordinate) {
         this.speed = speed;
         this.weight = weight;
         this.color = color;
         this.coordinate = coordinate;
     }
-
-    public String getValues() {
+    protected String getValues() {
         String info = "Object speed: " + this.speed + ". Weight: " + this.weight + ". Color: " + this.color + ".\n";
         StringBuilder infoCoordinates = new StringBuilder("Coordinates:\n");
         for (byte b : this.coordinate) infoCoordinates.append(b).append("\n");
