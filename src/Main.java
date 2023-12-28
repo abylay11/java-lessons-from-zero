@@ -1,32 +1,44 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-
 public class Main {
     public static void main(String[] args) {
-        // Collections in Java
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(5);
-        numbers.add(50);
-        numbers.add(1, 30);
+        // Методы в Java
+//        info("Hello");
+//        info("World");
+//        String java = "Java";
+//        info(java);
 
-        System.out.println(numbers.size());
-        System.out.println(numbers.get(1));
-        numbers.remove(1);
+        int res = summa((short) 5, (short) 7);
+        info(String.valueOf(res));
 
-//        numbers.clear();
+        byte[] nums1 = new byte[] {5, 6, 8};
 
-        for (Integer el : numbers) {
-            System.out.println(el);
-        }
+        int sum1 = summaArray(nums1);
+        System.out.println("Сумма 1: " + sum1);
 
-        // Linked List
-        LinkedList<Float> numbers2 = new LinkedList<>();
-        numbers2.add(5.6f);
-        numbers2.add(15.6f);
-        numbers2.add(17.6f);
+        byte[] nums2 = new byte[] {5, 6, 8, 10, 22, 3};
 
-        for (Float el: numbers2) {
-            System.out.println(el);
-        }
+        int sum2 = summaArray(nums2);
+        System.out.println("Сумма 2: " + sum2);
+    }
+
+    public static int summaArray(byte[] arr) {
+        int summa = 0;
+
+        for (byte i =0; i < arr.length; i++)
+            summa += arr[i];
+
+
+        return summa;
+    }
+
+    public static int summa(short a, short b) {
+        int res = a + b;
+        String result = "Результат: " + res;
+        info(result);
+        return res;
+    }
+
+    public static void info(String word) {
+        System.out.print(word);
+        System.out.println("!");
     }
 }
