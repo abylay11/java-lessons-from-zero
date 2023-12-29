@@ -11,14 +11,26 @@ public class Truck extends Transport {
         this.isLoaded = isLoaded;
     }
 
+//    @Override
+    public void setValues(float speed, int weight, String color, byte[] coordinate, boolean isLoaded) {
+        super.setValues(speed, weight, color, coordinate);
+        this.isLoaded = isLoaded;
+    }
+
+    @Override
+    protected String getValues() {
+        System.out.println(super.getValues());
+        return getLoaded();
+    }
+
     public void setLoaded(boolean loaded) {
         isLoaded = loaded;
     }
 
-    public void getLoaded() {
+    public String getLoaded() {
         if (isLoaded)
-            System.out.println("Грузовик загружен");
+            return "Грузовик загружен";
         else
-            System.out.println("Грузовик не загружен");
+            return "Грузовик не загружен";
     }
 }

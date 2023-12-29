@@ -8,12 +8,12 @@ public class Transport {
         // Join to DB
         System.out.println("Object created");
         this.setValues(_speed, _weight, _color, _coordinate);
-        System.out.println(this.getValues());
+//        System.out.println(this.getValues());
     }
     public Transport(int weight, byte[] coordinate) {
         this.weight = weight;
         this.coordinate = coordinate;
-        System.out.println(this.getValues());
+//        System.out.println(this.getValues());
     }
 
     protected void setValues(float speed, int weight, String color, byte[] coordinate) {
