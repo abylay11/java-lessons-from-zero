@@ -33,4 +33,15 @@ public class Truck extends Transport {
         else
             return "Грузовик не загружен";
     }
+
+    @Override
+    public void moveObject(float speed) {
+        System.out.println("Наш объект двигается со скоростью: " + speed);
+    }
+
+    @Override
+    public boolean stopObject() {
+        this.speed = 0;
+        return true;
+    }
 }
