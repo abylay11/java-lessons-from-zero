@@ -1,25 +1,30 @@
+import db.DB;
+
 public class Main {
+
     public static void main(String[] args) {
-        // ООП: Конструкторы класса
-        Car car = new Car(250.5f, 2500, "White", new byte[] {0,0,0});
-        car.engine.setValues(true, 10);
-        car.engine.info();
+        DB db = new DB(); // Класс из другого пакета
 
-        Truck truck = new Truck(5600, new byte[] {100, 0, 100}, false);
-        truck.engine.setValues(false, 1000);
-        truck.engine.info();
-//        truck.setValues(250.5f, 2500, "White", new byte[] {0,0,0}, true);
-//        System.out.println(truck.getValues());
+        final int count = 10;
+//        count++;
 
-        Car flyCar = new Car(250.5f, 2500, "White", new byte[] {0,0,0}) {
-            @Override
-            public void moveObject(float speed) {
-                super.moveObject(speed);
-                this.engine.isReady(true);
-                System.out.println("Машина летит");
-            }
-        };
+        Person person1 = new Person();
+        Person person2 = new Person();
+        Person person3 = new Person();
+        Person person4 = new Person();
+        Person.getCount();
 
-        flyCar.moveObject(450);
+//        Person.count = 5;
+//        System.out.println(Person.count);
+
+//        info("Hello world");
+    }
+
+    public static void info() {
+        System.out.println("Hello");
+    }
+
+    public static void info(String word) {
+        System.out.println(word + "!");
     }
 }
