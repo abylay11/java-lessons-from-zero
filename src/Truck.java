@@ -1,6 +1,7 @@
 public class Truck extends Transport {
 
     private boolean isLoaded;
+    public Engine engine = new Engine();
 
     public Truck(int weight, byte[] coordinate) {
         super(weight, coordinate);

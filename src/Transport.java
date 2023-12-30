@@ -4,6 +4,7 @@ public abstract class Transport {
     private String color;
     private byte[] coordinate;
 
+
     public Transport(float _speed, int _weight, String _color, byte[] _coordinate) {
         // Join to DB
         System.out.println("Object created");
@@ -31,5 +32,26 @@ public abstract class Transport {
         for (byte b : this.coordinate) infoCoordinates.append(b).append("\n");
 
         return info + infoCoordinates;
+    }
+
+    class Engine {
+        private boolean isReady;
+        private int km;
+
+        public void setValues(boolean isReady, int km) {
+            this.isReady = isReady;
+            this.km = km;
+        }
+
+        public void isReady(boolean isReady) {
+            this.isReady = isReady;
+        }
+
+        public void info() {
+            if (isReady)
+                System.out.println("Двигатель исправен");
+            else
+                System.out.println("Нет он не работает. Он проехал уже " + km + " км");
+        }
     }
 }
